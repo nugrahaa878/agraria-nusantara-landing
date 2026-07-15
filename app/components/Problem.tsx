@@ -1,19 +1,23 @@
 const painPoints = [
   {
+    stat: "Rp 4.000 → Rp 600",
     title: "Harga anjlok tiba-tiba",
-    desc: "Fluktuasi harga membuat petani sering merugi saat panen raya.",
+    desc: "Petani tomat pernah membuang hasil panen karena harga jatuh drastis dalam semalam.",
   },
   {
+    stat: "Berlapis-lapis",
     title: "Akses pasar sulit",
-    desc: "Produsen kesulitan menjangkau pedagang pasar secara langsung.",
+    desc: "Produsen tak punya jalur langsung ke pedagang — hasil panen berpindah tangan berkali-kali sebelum sampai pasar.",
   },
   {
+    stat: "Di bawah HPP",
     title: "Praktik tengkulak",
-    desc: "Perantara memotong margin petani dengan harga jauh di bawah pasar.",
+    desc: "Tanpa kepastian serap, banyak petani terpaksa jual ke tengkulak dengan harga di bawah harga pokok produksi.",
   },
   {
+    stat: "Tak konsisten",
     title: "Pasokan pedagang tak stabil",
-    desc: "Pedagang pasar kesulitan mendapat pasokan berkualitas secara konsisten.",
+    desc: "Pedagang pasar kesulitan menjaga stok berkualitas karena rantai pasok yang panjang dan tak menentu.",
   },
 ];
 
@@ -21,13 +25,15 @@ export default function Problem() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-20">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+        <p className="text-sm font-semibold uppercase tracking-wide text-primary">
           Kenapa Agratara hadir?
+        </p>
+        <h2 className="font-heading mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          Rantai distribusi pangan yang merugikan semua pihak
         </h2>
         <p className="mt-4 text-lg leading-8 text-foreground/80">
-          Rantai distribusi pangan tradisional yang panjang merugikan
-          produsen sekaligus pedagang. Ini kondisi nyata yang terus
-          berulang di berbagai daerah.
+          Ini bukan kasus terisolasi — pola yang sama terus berulang di
+          berbagai daerah di Indonesia setiap musim panen.
         </p>
       </div>
 
@@ -35,24 +41,12 @@ export default function Problem() {
         {painPoints.map((point) => (
           <div
             key={point.title}
-            className="rounded-2xl border border-border bg-surface p-6"
+            className="group rounded-2xl border border-border bg-surface p-6 transition-shadow hover:shadow-md"
           >
-            <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-destructive/10 text-destructive">
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M12 9v4m0 4h.01M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z" />
-              </svg>
-            </div>
-            <h3 className="font-heading text-lg font-bold text-foreground">
+            <span className="font-heading text-sm font-bold text-primary">
+              {point.stat}
+            </span>
+            <h3 className="font-heading mt-3 text-lg font-bold text-foreground">
               {point.title}
             </h3>
             <p className="mt-2 text-sm leading-6 text-foreground/70">

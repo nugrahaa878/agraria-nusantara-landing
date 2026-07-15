@@ -20,7 +20,7 @@ const steps = [
 
 export default function Solution() {
   return (
-    <section id="solusi" className="bg-white">
+    <section id="solusi" className="bg-[#0e1a17]">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl md:order-2">
           <Image
@@ -33,10 +33,10 @@ export default function Solution() {
         </div>
 
         <div className="md:order-1">
-          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+          <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Bagaimana Agratara bekerja?
           </h2>
-          <p className="mt-4 text-lg leading-8 text-foreground/80">
+          <p className="mt-4 text-lg leading-8 text-white/75">
             Sebuah ekosistem digital yang menghubungkan produsen dan
             pedagang secara langsung, transparan, dan efisien.
           </p>
@@ -44,14 +44,14 @@ export default function Solution() {
           <ol className="mt-8 space-y-6">
             {steps.map((step) => (
               <li key={step.label} className="flex gap-4">
-                <span className="font-heading flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                <span className="font-heading flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-sm font-bold text-secondary-foreground">
                   {step.label}
                 </span>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-foreground">
+                  <h3 className="font-heading text-lg font-bold text-white">
                     {step.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-6 text-foreground/70">
+                  <p className="mt-1 text-sm leading-6 text-white/65">
                     {step.desc}
                   </p>
                 </div>

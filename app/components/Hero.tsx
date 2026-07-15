@@ -31,7 +31,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a
               href="#untuk-siapa"
-              className="cursor-pointer rounded-full bg-primary px-6 py-3.5 text-center text-base font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#3e6a4d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="cursor-pointer rounded-full bg-primary px-6 py-3.5 text-center text-base font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#0a6459] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Saya Petani/Peternak
             </a>

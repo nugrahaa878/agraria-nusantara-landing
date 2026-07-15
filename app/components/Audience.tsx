@@ -52,7 +52,7 @@ export default function Audience() {
             </ul>
             <a
               href="#kontak"
-              className="mt-8 inline-block cursor-pointer rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#3e6a4d]"
+              className="mt-8 inline-block cursor-pointer rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#0a6459]"
             >
               Daftar sebagai Produsen
             </a>

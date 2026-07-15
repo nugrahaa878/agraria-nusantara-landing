@@ -47,7 +47,7 @@ export default function ContactFooter() {
               />
               <button
                 type="submit"
-                className="h-12 cursor-pointer rounded-full bg-primary px-6 text-base font-semibold text-primary-foreground transition-colors hover:bg-[#3e6a4d]"
+                className="h-12 cursor-pointer rounded-full bg-primary px-6 text-base font-semibold text-primary-foreground transition-colors hover:bg-[#0a6459]"
               >
                 Gabung Sekarang
               </button>
@@ -56,7 +56,7 @@ export default function ContactFooter() {
         </div>
       </section>
 
-      <footer className="bg-background text-muted-foreground">
+      <footer className="bg-surface text-muted-foreground">
         <div className="mx-auto max-w-6xl border-t border-border px-6 py-12">
           <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
             <div>

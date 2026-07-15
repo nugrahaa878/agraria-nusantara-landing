@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="#"
@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="hidden md:block">
           <a
             href="#kontak"
-            className="cursor-pointer rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#3e6a4d] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="cursor-pointer rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-[#0a6459] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             Gabung Sekarang
           </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-border bg-background px-6 py-4 md:hidden">
+        <div className="border-t border-border bg-surface px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
