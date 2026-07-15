@@ -74,7 +74,7 @@ export default function WhyUs() {
               <p className="mt-1 text-sm font-semibold text-white/90">
                 {item.title}
               </p>
-              <p className="mt-2 text-sm leading-6 text-white/75">
+              <p className="mt-2 text-base leading-6 text-white/75">
                 {item.desc}
               </p>
             </div>

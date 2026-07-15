@@ -89,7 +89,7 @@ export default function VisionMission() {
                   <h3 className="font-heading text-lg font-bold text-white">
                     {mission.title}
                   </h3>
-                  <p className="mt-2 text-sm leading-6 text-white/65">
+                  <p className="mt-2 text-base leading-6 text-white/65">
                     {mission.desc}
                   </p>
                 </div>

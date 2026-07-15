@@ -22,7 +22,7 @@ export default function Solution() {
   return (
     <section id="solusi" className="bg-[#0e1a17]">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 md:grid-cols-2">
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl md:order-2">
+        <div className="relative order-2 aspect-[4/3] w-full overflow-hidden rounded-3xl">
           <Image
             src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?auto=format&fit=crop&w=1200&q=80"
             alt="Pedagang pasar memilih hasil bumi segar"
@@ -32,7 +32,7 @@ export default function Solution() {
           />
         </div>
 
-        <div className="md:order-1">
+        <div className="order-1">
           <h2 className="font-heading text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
             Bagaimana Agratara bekerja?
           </h2>
@@ -51,7 +51,7 @@ export default function Solution() {
                   <h3 className="font-heading text-lg font-bold text-white">
                     {step.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-6 text-white/65">
+                  <p className="mt-1 text-base leading-6 text-white/65">
                     {step.desc}
                   </p>
                 </div>

@@ -4,7 +4,7 @@ export default function About() {
   return (
     <section id="tentang" className="mx-auto max-w-6xl px-6 py-20">
       <div className="grid items-center gap-12 md:grid-cols-2">
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+        <div className="relative order-2 aspect-[4/3] w-full overflow-hidden rounded-3xl">
           <Image
             src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=1200&q=80"
             alt="Lanskap sawah dan lahan pertanian subur di Indonesia"
@@ -14,7 +14,7 @@ export default function About() {
           />
         </div>
 
-        <div>
+        <div className="order-1">
           <p className="text-sm font-semibold uppercase tracking-wide text-accent">
             Tentang Kami
           </p>

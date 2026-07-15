@@ -42,7 +42,7 @@ export default function Audience() {
             <h3 className="font-heading text-xl font-bold text-foreground">
               Untuk Petani &amp; Peternak
             </h3>
-            <p className="mt-2 text-sm text-foreground/70">
+            <p className="mt-2 text-base text-foreground/70">
               Jual hasil panen langsung ke pedagang, tanpa tengkulak.
             </p>
             <ul className="mt-6 space-y-3">
@@ -73,7 +73,7 @@ export default function Audience() {
             <h3 className="font-heading text-xl font-bold text-foreground">
               Untuk Pedagang Pasar
             </h3>
-            <p className="mt-2 text-sm text-foreground/70">
+            <p className="mt-2 text-base text-foreground/70">
               Dapatkan pasokan stabil, berkualitas, dengan harga kompetitif.
             </p>
             <ul className="mt-6 space-y-3">

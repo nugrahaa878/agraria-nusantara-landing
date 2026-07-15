@@ -49,7 +49,7 @@ export default function Problem() {
             <h3 className="font-heading mt-3 text-lg font-bold text-foreground">
               {point.title}
             </h3>
-            <p className="mt-2 text-sm leading-6 text-foreground/70">
+            <p className="mt-2 text-base leading-6 text-foreground/70">
               {point.desc}
             </p>
           </div>
