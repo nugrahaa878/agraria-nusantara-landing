@@ -25,8 +25,25 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.name}
           </h3>
         </Link>
-        <p className="mt-0.5 text-[11px] text-muted-foreground sm:mt-1 sm:text-sm">
-          {product.partner}
+        <p className="mt-0.5 flex items-center gap-1 text-[11px] text-muted-foreground sm:mt-1 sm:text-sm">
+          <svg
+            width="11"
+            height="11"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="shrink-0 sm:h-3.5 sm:w-3.5"
+            aria-hidden="true"
+          >
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+          <span className="truncate">
+            {product.partner} · {product.location}
+          </span>
         </p>
         <p className="mt-1.5 hidden text-xs leading-5 text-foreground/70 sm:block sm:text-sm sm:leading-6">
           {product.desc}

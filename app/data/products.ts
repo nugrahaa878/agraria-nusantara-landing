@@ -24,7 +24,7 @@ export const products: Product[] = [
     name: "Beras Premium",
     category: "Hasil Tani",
     partner: "Tani Makmur",
-    location: "Karawang, Jawa Barat",
+    location: "Kabupaten Karawang, Jawa Barat",
     tag: "Panen Baru",
     desc: "Beras pulen kualitas premium, digiling langsung dari gabah pilihan hasil panen minggu ini.",
     longDesc:
@@ -41,7 +41,7 @@ export const products: Product[] = [
     name: "Sayur Segar Campur",
     category: "Hasil Tani",
     partner: "Kebun Lestari",
-    location: "Lembang, Jawa Barat",
+    location: "Kabupaten Bandung Barat, Jawa Barat",
     tag: "Dipetik Harian",
     desc: "Campuran sayur dataran tinggi — wortel, kol, dan brokoli — dipetik pagi hari untuk kesegaran maksimal.",
     longDesc:
@@ -58,7 +58,7 @@ export const products: Product[] = [
     name: "Ayam Potong",
     category: "Peternakan",
     partner: "Peternakan Berkah",
-    location: "Sukabumi, Jawa Barat",
+    location: "Kabupaten Sukabumi, Jawa Barat",
     tag: "Tanpa Antibiotik",
     desc: "Ayam broiler dipelihara bebas antibiotik, dipotong sesuai standar higienis siap kirim harian.",
     longDesc:
@@ -75,7 +75,7 @@ export const products: Product[] = [
     name: "Telur Ayam",
     category: "Peternakan",
     partner: "Peternakan Berkah",
-    location: "Sukabumi, Jawa Barat",
+    location: "Kabupaten Sukabumi, Jawa Barat",
     tag: "Grade A",
     desc: "Telur ayam negeri grade A, disortir manual untuk memastikan ukuran dan kualitas cangkang terbaik.",
     longDesc:
@@ -92,7 +92,7 @@ export const products: Product[] = [
     name: "Singkong",
     category: "Hasil Tani",
     partner: "Tani Makmur",
-    location: "Karawang, Jawa Barat",
+    location: "Kabupaten Karawang, Jawa Barat",
     tag: "Panen Baru",
     desc: "Singkong lokal ukuran besar, dipanen langsung dari kebun tanpa penyimpanan lama.",
     longDesc:
@@ -109,7 +109,7 @@ export const products: Product[] = [
     name: "Gabah Kering",
     category: "Hasil Tani",
     partner: "Sawah Subur",
-    location: "Indramayu, Jawa Barat",
+    location: "Kabupaten Indramayu, Jawa Barat",
     tag: "Sesuai HPP",
     desc: "Gabah kering giling dengan kadar air sesuai standar HPP, siap diproses gudang atau penggilingan.",
     longDesc:
@@ -126,7 +126,7 @@ export const products: Product[] = [
     name: "Cabai Merah",
     category: "Hasil Tani",
     partner: "Kebun Lestari",
-    location: "Lembang, Jawa Barat",
+    location: "Kabupaten Bandung Barat, Jawa Barat",
     tag: "Pedas Segar",
     desc: "Cabai merah keriting segar, dipetik langsung dari kebun dataran tinggi Lembang.",
     longDesc:
@@ -143,7 +143,7 @@ export const products: Product[] = [
     name: "Jagung Manis",
     category: "Hasil Tani",
     partner: "Tani Makmur",
-    location: "Karawang, Jawa Barat",
+    location: "Kabupaten Karawang, Jawa Barat",
     tag: "Panen Baru",
     desc: "Jagung manis lokal, dipanen dalam kondisi optimal untuk rasa manis maksimal.",
     longDesc:
@@ -160,7 +160,7 @@ export const products: Product[] = [
     name: "Susu Sapi Segar",
     category: "Peternakan",
     partner: "Peternakan Sejahtera",
-    location: "Boyolali, Jawa Tengah",
+    location: "Kabupaten Boyolali, Jawa Tengah",
     tag: "Perah Harian",
     desc: "Susu sapi segar hasil perah pagi hari, tanpa bahan pengawet, langsung dikirim dingin.",
     longDesc:
@@ -177,7 +177,7 @@ export const products: Product[] = [
     name: "Daging Sapi",
     category: "Peternakan",
     partner: "Peternakan Sejahtera",
-    location: "Boyolali, Jawa Tengah",
+    location: "Kabupaten Boyolali, Jawa Tengah",
     tag: "Potong Segar",
     desc: "Daging sapi lokal potongan segar, dipotong sesuai pesanan tanpa penyimpanan beku lama.",
     longDesc:
@@ -194,7 +194,7 @@ export const products: Product[] = [
     name: "Kentang",
     category: "Hasil Tani",
     partner: "Kebun Lestari",
-    location: "Lembang, Jawa Barat",
+    location: "Kabupaten Bandung Barat, Jawa Barat",
     tag: "Dipetik Harian",
     desc: "Kentang dataran tinggi kualitas terbaik, cocok untuk kebutuhan rumah tangga maupun industri.",
     longDesc:
@@ -211,7 +211,7 @@ export const products: Product[] = [
     name: "Ikan Nila",
     category: "Peternakan",
     partner: "Kolam Makmur",
-    location: "Purwakarta, Jawa Barat",
+    location: "Kabupaten Purwakarta, Jawa Barat",
     tag: "Panen Kolam",
     desc: "Ikan nila hasil budidaya kolam air tawar, dipanen segar sesuai permintaan.",
     longDesc:
