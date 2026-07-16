@@ -13,10 +13,46 @@ const openSans = Open_Sans({
   subsets: ["latin"],
 });
 
+const title = "Agratara — Kedaulatan Pangan untuk Kesejahteraan Bangsa";
+const description =
+  "Agratara menghubungkan petani, peternak, dan pedagang pasar secara langsung — harga adil, pasokan stabil, tanpa tengkulak.";
+
 export const metadata: Metadata = {
-  title: "Agratara — Kedaulatan Pangan untuk Kesejahteraan Bangsa",
-  description:
-    "Agratara menghubungkan petani, peternak, dan pedagang pasar secara langsung — harga adil, pasokan stabil, tanpa tengkulak.",
+  metadataBase: new URL("https://agratara.netlify.app"),
+  title: {
+    default: title,
+    template: "%s | Agratara",
+  },
+  description,
+  authors: [{ name: "Agratara" }],
+  creator: "Agratara",
+  publisher: "Agratara",
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://agratara.netlify.app",
+    title,
+    description,
+    siteName: "Agratara",
+    images: [
+      {
+        url: "/main-logo-agratara.png",
+        width: 1200,
+        height: 630,
+        alt: title,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/main-logo-agratara.png"],
+  },
 };
 
 export default function RootLayout({
