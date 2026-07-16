@@ -6,7 +6,7 @@ import Link from "next/link";
 const navLinks = [
   { href: "#solusi", label: "Solusi" },
   { href: "#untuk-siapa", label: "Untuk Siapa" },
-  { href: "#produk", label: "Produk" },
+  { href: "/katalog", label: "Katalog" },
   { href: "#tentang", label: "Tentang" },
 ];
 
@@ -26,12 +26,12 @@ export default function Navbar() {
         <ul className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a
+              <Link
                 href={link.href}
                 className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
               >
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -76,13 +76,13 @@ export default function Navbar() {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a
+                <Link
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className="block text-base font-medium text-foreground/80 hover:text-primary"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
             <li>

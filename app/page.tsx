@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Problem from "./components/Problem";
 import Solution from "./components/Solution";
 import Audience from "./components/Audience";
+import Catalog from "./components/Catalog";
 import VisionMission from "./components/VisionMission";
 import WhyUs from "./components/WhyUs";
 import Products from "./components/Products";
@@ -18,6 +19,7 @@ export default function Home() {
         <Problem />
         <Solution />
         <Audience />
+        <Catalog />
         <VisionMission />
         <WhyUs />
         <Products />

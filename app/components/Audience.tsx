@@ -1,5 +1,10 @@
 import Image from "next/image";
 
+const WHATSAPP_NUMBER = "6281268529556";
+const farmerWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  "Halo, saya petani/peternak dan tertarik untuk bergabung sebagai mitra produsen di Agratara."
+)}`;
+
 const farmerFeatures = [
   "Informasi harga pasar real-time",
   "Pendaftaran produk dengan mudah",
@@ -51,7 +56,9 @@ export default function Audience() {
               ))}
             </ul>
             <a
-              href="#kontak"
+              href={farmerWhatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-6 inline-block cursor-pointer rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#0a6459] sm:mt-8"
             >
               Daftar sebagai Produsen
@@ -82,10 +89,10 @@ export default function Audience() {
               ))}
             </ul>
             <a
-              href="#kontak"
+              href="#katalog"
               className="mt-6 inline-block cursor-pointer rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 sm:mt-8"
             >
-              Daftar sebagai Pedagang
+              Saya adalah pedagang
             </a>
           </div>
         </div>
