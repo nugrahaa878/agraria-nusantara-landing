@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Agratara",
     images: [
       {
-        url: "/main-logo-agratara.png",
+        url: "/og-image-agratara.png",
         width: 1200,
         height: 630,
         alt: title,
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    images: ["/main-logo-agratara.png"],
+    images: ["/og-image-agratara.png"],
   },
 };
 
