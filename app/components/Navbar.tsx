@@ -4,10 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "#solusi", label: "Solusi" },
-  { href: "#untuk-siapa", label: "Untuk Siapa" },
+  { href: "/#solusi", label: "Solusi" },
+  { href: "/#untuk-siapa", label: "Untuk Siapa" },
   { href: "/katalog", label: "Katalog" },
-  { href: "#tentang", label: "Tentang" },
+  { href: "/#tentang", label: "Tentang" },
 ];
 
 export default function Navbar() {
@@ -17,7 +17,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
-          href="#"
+          href="/"
           className="font-heading text-xl font-extrabold tracking-tight text-primary"
         >
           Agratara
