@@ -41,21 +41,21 @@ const advantages = [
 
 export default function WhyUs() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20">
+    <section className="mx-auto max-w-6xl px-6 py-12 sm:py-20">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-semibold uppercase tracking-wide text-primary">
+        <p className="text-xs font-semibold uppercase tracking-wide text-primary sm:text-sm">
           Kelebihan Agratara
         </p>
-        <h2 className="font-heading mt-3 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+        <h2 className="font-heading mt-2 text-2xl font-extrabold tracking-tight text-foreground sm:mt-3 sm:text-3xl md:text-4xl">
           Dibangun untuk kepercayaan, bukan sekadar transaksi
         </h2>
       </div>
 
-      <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-4 sm:grid-rows-3">
+      <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-12 sm:grid-cols-4 sm:grid-rows-3 sm:gap-4">
         {advantages.map((item) => (
           <div
             key={item.title}
-            className={`relative min-h-56 overflow-hidden rounded-3xl ${item.span}`}
+            className={`relative min-h-44 overflow-hidden rounded-3xl sm:min-h-56 ${item.span}`}
           >
             <Image
               src={item.image}
@@ -65,16 +65,16 @@ export default function WhyUs() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-            <div className="relative flex h-full flex-col justify-end p-6">
+            <div className="relative flex h-full flex-col justify-end p-4 sm:p-6">
               {item.stat && (
-                <span className="font-heading text-4xl font-extrabold text-white">
+                <span className="font-heading text-2xl font-extrabold text-white sm:text-4xl">
                   {item.stat}
                 </span>
               )}
               <p className="mt-1 text-sm font-semibold text-white/90">
                 {item.title}
               </p>
-              <p className="mt-2 text-base leading-6 text-white/75">
+              <p className="mt-1.5 text-sm leading-6 text-white/75 sm:mt-2 sm:text-base">
                 {item.desc}
               </p>
             </div>

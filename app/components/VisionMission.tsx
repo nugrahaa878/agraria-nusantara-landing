@@ -31,19 +31,19 @@ const missions = [
 export default function VisionMission() {
   return (
     <section className="relative overflow-hidden bg-[#0e1a17]">
-      <div className="mx-auto max-w-6xl px-6 py-20">
-        <div className="grid gap-10 md:grid-cols-5 md:items-end">
+      <div className="mx-auto max-w-6xl px-6 py-12 sm:py-20">
+        <div className="grid gap-6 sm:gap-10 md:grid-cols-5 md:items-end">
           <div className="md:col-span-3">
-            <p className="text-sm font-semibold uppercase tracking-wide text-secondary">
+            <p className="text-xs font-semibold uppercase tracking-wide text-secondary sm:text-sm">
               Visi Kami
             </p>
-            <h2 className="font-heading mt-4 text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
+            <h2 className="font-heading mt-3 text-2xl font-extrabold leading-tight tracking-tight text-white sm:mt-4 sm:text-3xl md:text-4xl lg:text-5xl">
               Menjadi jembatan digital utama untuk pangan Indonesia yang
               berkelanjutan.
             </h2>
           </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl md:col-span-2">
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl sm:aspect-[4/3] md:col-span-2">
             <Image
               src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80"
               alt="Ladang padi hijau membentang di Indonesia"
@@ -54,12 +54,12 @@ export default function VisionMission() {
           </div>
         </div>
 
-        <div className="mt-20 grid gap-12 md:grid-cols-12">
+        <div className="mt-12 grid gap-8 sm:mt-20 sm:gap-12 md:grid-cols-12">
           <div className="md:col-span-4">
-            <p className="text-sm font-semibold uppercase tracking-wide text-secondary">
+            <p className="text-xs font-semibold uppercase tracking-wide text-secondary sm:text-sm">
               Misi
             </p>
-            <p className="mt-4 text-lg leading-8 text-white/70">
+            <p className="mt-3 text-base leading-7 text-white/70 sm:mt-4 sm:text-lg sm:leading-8">
               Lima komitmen yang kami jalankan untuk membangun ekosistem
               pangan yang adil bagi produsen dan pedagang.
             </p>
@@ -78,18 +78,18 @@ export default function VisionMission() {
             {missions.map((mission, i) => (
               <li
                 key={mission.number}
-                className={`flex gap-6 py-6 ${
+                className={`flex gap-4 py-5 sm:gap-6 sm:py-6 ${
                   i !== 0 ? "border-t border-white/10" : ""
                 }`}
               >
-                <span className="font-heading shrink-0 text-2xl font-extrabold text-white/25">
+                <span className="font-heading shrink-0 text-xl font-extrabold text-white/25 sm:text-2xl">
                   {mission.number}
                 </span>
                 <div>
-                  <h3 className="font-heading text-lg font-bold text-white">
+                  <h3 className="font-heading text-base font-bold text-white sm:text-lg">
                     {mission.title}
                   </h3>
-                  <p className="mt-2 text-base leading-6 text-white/65">
+                  <p className="mt-1.5 text-sm leading-6 text-white/65 sm:mt-2 sm:text-base">
                     {mission.desc}
                   </p>
                 </div>

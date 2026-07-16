@@ -42,23 +42,23 @@ const productGroups = [
 export default function Products() {
   return (
     <section id="produk" className="bg-[#0e1a17]">
-      <div className="mx-auto max-w-6xl px-6 py-20">
+      <div className="mx-auto max-w-6xl px-6 py-12 sm:py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-wide text-secondary">
+          <p className="text-xs font-semibold uppercase tracking-wide text-secondary sm:text-sm">
             Produk &amp; Layanan
           </p>
-          <h2 className="font-heading mt-3 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-heading mt-2 text-2xl font-extrabold tracking-tight text-white sm:mt-3 sm:text-3xl md:text-4xl">
             Satu platform, dua sisi ekosistem pangan
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 sm:items-stretch">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:items-stretch sm:gap-5">
           {productGroups.map((group) => (
             <div
               key={group.title}
               className="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10"
             >
-              <div className="relative h-40 w-full shrink-0">
+              <div className="relative h-32 w-full shrink-0 sm:h-40">
                 <Image
                   src={group.image}
                   alt={group.alt}
@@ -67,11 +67,11 @@ export default function Products() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex flex-1 flex-col bg-white/5 p-6">
-                <h3 className="font-heading text-lg font-bold text-white">
+              <div className="flex flex-1 flex-col bg-white/5 p-5 sm:p-6">
+                <h3 className="font-heading text-base font-bold text-white sm:text-lg">
                   {group.title}
                 </h3>
-                <ul className="mt-4 space-y-2.5">
+                <ul className="mt-3 space-y-2 sm:mt-4 sm:space-y-2.5">
                   {group.items.map((item) => (
                     <FeatureRow key={item} label={item} />
                   ))}

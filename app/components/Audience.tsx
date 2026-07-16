@@ -16,20 +16,20 @@ const traderFeatures = [
 
 export default function Audience() {
   return (
-    <section id="untuk-siapa" className="mx-auto max-w-6xl px-6 py-20">
+    <section id="untuk-siapa" className="mx-auto max-w-6xl px-6 py-12 sm:py-20">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="font-heading text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+        <h2 className="font-heading text-2xl font-extrabold tracking-tight text-foreground sm:text-3xl md:text-4xl">
           Dibangun untuk dua sisi ekosistem pangan
         </h2>
-        <p className="mt-4 text-lg leading-8 text-foreground/80">
+        <p className="mt-3 text-base leading-7 text-foreground/80 sm:mt-4 sm:text-lg sm:leading-8">
           Baik Anda produsen di ladang maupun pedagang di pasar, Agratara
           punya alat yang Anda butuhkan.
         </p>
       </div>
 
-      <div className="mt-12 grid gap-8 md:grid-cols-2">
+      <div className="mt-8 grid gap-6 sm:mt-12 sm:gap-8 md:grid-cols-2">
         <div className="overflow-hidden rounded-3xl border border-border">
-          <div className="relative h-56 w-full">
+          <div className="relative h-44 w-full sm:h-56">
             <Image
               src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e1e?auto=format&fit=crop&w=900&q=80"
               alt="Petani bekerja di sawah dengan hasil panen"
@@ -38,21 +38,21 @@ export default function Audience() {
               className="object-cover"
             />
           </div>
-          <div className="p-8">
-            <h3 className="font-heading text-xl font-bold text-foreground">
+          <div className="p-6 sm:p-8">
+            <h3 className="font-heading text-lg font-bold text-foreground sm:text-xl">
               Untuk Petani &amp; Peternak
             </h3>
-            <p className="mt-2 text-base text-foreground/70">
+            <p className="mt-2 text-sm text-foreground/70 sm:text-base">
               Jual hasil panen langsung ke pedagang, tanpa tengkulak.
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-5 space-y-2.5 sm:mt-6 sm:space-y-3">
               {farmerFeatures.map((feature) => (
                 <FeatureItem key={feature} label={feature} />
               ))}
             </ul>
             <a
               href="#kontak"
-              className="mt-8 inline-block cursor-pointer rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#0a6459]"
+              className="mt-6 inline-block cursor-pointer rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-[#0a6459] sm:mt-8"
             >
               Daftar sebagai Produsen
             </a>
@@ -60,7 +60,7 @@ export default function Audience() {
         </div>
 
         <div className="overflow-hidden rounded-3xl border border-border">
-          <div className="relative h-56 w-full">
+          <div className="relative h-44 w-full sm:h-56">
             <Image
               src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=900&q=80"
               alt="Pedagang pasar menata hasil bumi segar untuk dijual"
@@ -69,21 +69,21 @@ export default function Audience() {
               className="object-cover"
             />
           </div>
-          <div className="p-8">
-            <h3 className="font-heading text-xl font-bold text-foreground">
+          <div className="p-6 sm:p-8">
+            <h3 className="font-heading text-lg font-bold text-foreground sm:text-xl">
               Untuk Pedagang Pasar
             </h3>
-            <p className="mt-2 text-base text-foreground/70">
+            <p className="mt-2 text-sm text-foreground/70 sm:text-base">
               Dapatkan pasokan stabil, berkualitas, dengan harga kompetitif.
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-5 space-y-2.5 sm:mt-6 sm:space-y-3">
               {traderFeatures.map((feature) => (
                 <FeatureItem key={feature} label={feature} />
               ))}
             </ul>
             <a
               href="#kontak"
-              className="mt-8 inline-block cursor-pointer rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10"
+              className="mt-6 inline-block cursor-pointer rounded-full border border-primary px-6 py-3 text-sm font-semibold text-primary transition-colors hover:bg-primary/10 sm:mt-8"
             >
               Daftar sebagai Pedagang
             </a>
