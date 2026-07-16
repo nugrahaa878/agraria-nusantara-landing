@@ -223,6 +223,74 @@ export const products: Product[] = [
       "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?auto=format&fit=crop&w=1200&q=80",
     alt: "Ikan nila segar hasil budidaya",
   },
+  {
+    slug: "apel-malang",
+    name: "Apel Malang",
+    category: "Hasil Tani",
+    partner: "Kebun Agro Sejahtera",
+    location: "Kabupaten Malang, Jawa Timur",
+    tag: "Panen Baru",
+    desc: "Apel manalagi khas Malang, dipetik langsung dari kebun dataran tinggi.",
+    longDesc:
+      "Apel manalagi dan rome beauty khas Malang, dipetik langsung dari kebun dataran tinggi Kabupaten Malang. Rasa manis segar dan tekstur renyah terjaga karena proses panen dan pengiriman yang cepat.",
+    minOrder: "10 kg",
+    price: "Rp 18.000",
+    unit: "/kg",
+    image:
+      "https://images.unsplash.com/photo-1567113463300-102a7eb3cb26?auto=format&fit=crop&w=1200&q=80",
+    alt: "Apel segar hasil panen Malang",
+  },
+  {
+    slug: "beras-bali",
+    name: "Beras Merah Bali",
+    category: "Hasil Tani",
+    partner: "Subak Tani Lestari",
+    location: "Kabupaten Tabanan, Bali",
+    tag: "Organik",
+    desc: "Beras merah organik hasil sistem subak tradisional Tabanan, kaya serat.",
+    longDesc:
+      "Beras merah organik ditanam menggunakan sistem irigasi subak tradisional di Kabupaten Tabanan, Bali. Ditanam tanpa pestisida kimia, kaya serat, dan cocok untuk kebutuhan pangan sehat.",
+    minOrder: "10 kg",
+    price: "Rp 16.000",
+    unit: "/kg",
+    image:
+      "https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?auto=format&fit=crop&w=1200&q=80",
+    alt: "Beras merah organik hasil panen Bali",
+  },
+  {
+    slug: "kol-karo",
+    name: "Kol Segar Karo",
+    category: "Hasil Tani",
+    partner: "Tani Dataran Tinggi",
+    location: "Kabupaten Karo, Sumatera Utara",
+    tag: "Dipetik Harian",
+    desc: "Kol dataran tinggi Karo, renyah dan segar, dipetik setiap pagi.",
+    longDesc:
+      "Kol dataran tinggi dari Kabupaten Karo, Sumatera Utara, dipetik setiap pagi untuk menjaga kerenyahan dan kesegaran. Cocok untuk pedagang pasar maupun kebutuhan rumah makan.",
+    minOrder: "20 kg",
+    price: "Rp 6.000",
+    unit: "/kg",
+    image:
+      "https://images.unsplash.com/photo-1560785496-3c9d27877182?auto=format&fit=crop&w=1200&q=80",
+    alt: "Kol segar hasil panen Karo",
+  },
+  {
+    slug: "kakao-bantaeng",
+    name: "Biji Kakao",
+    category: "Hasil Tani",
+    partner: "Koperasi Kakao Bantaeng",
+    location: "Kabupaten Bantaeng, Sulawesi Selatan",
+    tag: "Kualitas Ekspor",
+    desc: "Biji kakao fermentasi kualitas ekspor dari petani Bantaeng.",
+    longDesc:
+      "Biji kakao fermentasi kualitas ekspor dari Koperasi Kakao Bantaeng, Sulawesi Selatan. Diproses dengan standar fermentasi terjaga untuk menghasilkan aroma dan cita rasa cokelat terbaik.",
+    minOrder: "25 kg",
+    price: "Rp 32.000",
+    unit: "/kg",
+    image:
+      "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&w=1200&q=80",
+    alt: "Biji kakao fermentasi kualitas ekspor",
+  },
 ];
 
 export function buildWhatsappUrl(product: Product) {

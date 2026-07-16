@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { products, type ProductCategory } from "../data/products";
 import ProductCard from "./ProductCard";
+import LocationDropdown from "./LocationDropdown";
 
 const categories: (ProductCategory | "Semua")[] = [
   "Semua",
@@ -32,7 +33,7 @@ export default function CatalogGrid() {
     if (provincesLoaded || provincesLoading) return;
     setProvincesLoading(true);
     try {
-      const res = await fetch("https://wilayah.id/api/provinces.json");
+      const res = await fetch("/api/wilayah/provinces");
       const json = await res.json();
       setProvinces(json.data ?? []);
       setProvincesLoaded(true);
@@ -43,15 +44,15 @@ export default function CatalogGrid() {
     }
   }
 
-  async function handleSelectProvince(province: Region) {
+  async function handleSelectProvince(province: Region | null) {
     setSelectedProvince(province);
     setSelectedCity(null);
     setCities([]);
+    if (!province) return;
+
     setCitiesLoading(true);
     try {
-      const res = await fetch(
-        `https://wilayah.id/api/regencies/${province.code}.json`
-      );
+      const res = await fetch(`/api/wilayah/regencies/${province.code}`);
       const json = await res.json();
       setCities(json.data ?? []);
     } catch {
@@ -76,79 +77,85 @@ export default function CatalogGrid() {
 
     const matchesCity =
       !selectedCity ||
-      product.location.includes(selectedCity.name.replace(/^Kabupaten |^Kota /, ""));
+      product.location.includes(
+        selectedCity.name.replace(/^Kabupaten |^Kota /, "")
+      );
 
     return matchesCategory && matchesProvince && matchesCity;
   });
 
+  const activeFilterCount =
+    (activeCategory !== "Semua" ? 1 : 0) +
+    (selectedProvince ? 1 : 0) +
+    (selectedCity ? 1 : 0);
+
+  function resetAll() {
+    setActiveCategory("Semua");
+    clearLocationFilter();
+  }
+
   return (
     <div>
-      <div className="flex flex-wrap justify-center gap-2">
-        {categories.map((category) => (
-          <button
-            key={category}
-            type="button"
-            onClick={() => setActiveCategory(category)}
-            className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
-              activeCategory === category
-                ? "bg-primary text-primary-foreground"
-                : "border border-border bg-surface text-foreground/70 hover:bg-muted"
-            }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      <div className="rounded-3xl border border-border bg-surface p-4 sm:p-5">
+        <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+          <div className="flex flex-wrap gap-1.5 rounded-full bg-background p-1.5">
+            {categories.map((category) => (
+              <button
+                key={category}
+                type="button"
+                onClick={() => setActiveCategory(category)}
+                className={`cursor-pointer rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
+                  activeCategory === category
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground/70 hover:bg-muted"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
 
-      <div className="mt-4 flex flex-wrap justify-center gap-2">
-        <select
-          value={selectedProvince?.code ?? ""}
-          onClick={loadProvinces}
-          onFocus={loadProvinces}
-          onChange={(e) => {
-            const province = provinces.find((p) => p.code === e.target.value);
-            if (province) handleSelectProvince(province);
-            else clearLocationFilter();
-          }}
-          className="cursor-pointer rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-foreground/80"
-        >
-          <option value="">
-            {provincesLoading ? "Memuat provinsi..." : "Semua Provinsi"}
-          </option>
-          {provinces.map((province) => (
-            <option key={province.code} value={province.code}>
-              {province.name}
-            </option>
-          ))}
-        </select>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="hidden text-xs font-semibold tracking-wide text-muted-foreground uppercase sm:inline">
+              Lokasi
+            </span>
+            <LocationDropdown
+              label="Filter provinsi"
+              placeholder="Semua Provinsi"
+              loadingLabel="Memuat provinsi..."
+              options={provinces}
+              loading={provincesLoading}
+              selected={selectedProvince}
+              onOpen={loadProvinces}
+              onSelect={handleSelectProvince}
+            />
+            <LocationDropdown
+              label="Filter kota/kabupaten"
+              placeholder="Semua Kota/Kabupaten"
+              loadingLabel="Memuat kota/kabupaten..."
+              options={cities}
+              loading={citiesLoading}
+              disabled={!selectedProvince}
+              selected={selectedCity}
+              onSelect={setSelectedCity}
+            />
+          </div>
+        </div>
 
-        <select
-          value={selectedCity?.code ?? ""}
-          disabled={!selectedProvince}
-          onChange={(e) => {
-            const city = cities.find((c) => c.code === e.target.value);
-            setSelectedCity(city ?? null);
-          }}
-          className="cursor-pointer rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-foreground/80 disabled:cursor-not-allowed disabled:opacity-50"
-        >
-          <option value="">
-            {citiesLoading ? "Memuat kota/kabupaten..." : "Semua Kota/Kabupaten"}
-          </option>
-          {cities.map((city) => (
-            <option key={city.code} value={city.code}>
-              {city.name}
-            </option>
-          ))}
-        </select>
-
-        {(selectedProvince || selectedCity) && (
-          <button
-            type="button"
-            onClick={clearLocationFilter}
-            className="cursor-pointer rounded-full px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10"
-          >
-            Reset Lokasi
-          </button>
+        {activeFilterCount > 0 && (
+          <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
+            <p className="text-xs text-muted-foreground">
+              {activeFilterCount} filter aktif · {filtered.length} produk
+              ditemukan
+            </p>
+            <button
+              type="button"
+              onClick={resetAll}
+              className="cursor-pointer text-xs font-semibold text-primary hover:underline"
+            >
+              Hapus semua filter
+            </button>
+          </div>
         )}
       </div>
 
