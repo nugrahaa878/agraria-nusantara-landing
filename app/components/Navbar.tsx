@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const navLinks = [
@@ -16,11 +17,15 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-surface/95 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link
-          href="/"
-          className="font-heading text-xl font-extrabold tracking-tight text-primary"
-        >
-          Agratara
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/main-logo-agratara.png"
+            alt="Agratara"
+            width={325}
+            height={83}
+            priority
+            className="h-8 w-auto sm:h-9"
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

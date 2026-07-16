@@ -46,7 +46,7 @@ export default function ProductCard({ product }: { product: Product }) {
               Detail
             </Link>
             <a
-              href={buildWhatsappUrl(product.name)}
+              href={buildWhatsappUrl(product)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-1 cursor-pointer items-center justify-center rounded-full bg-primary py-1.5 text-xs font-semibold text-primary-foreground transition-colors hover:bg-[#0a6459] sm:py-2 sm:text-sm"

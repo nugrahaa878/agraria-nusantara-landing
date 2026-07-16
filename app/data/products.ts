@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "6281268529556";
+export const WHATSAPP_NUMBER = "6282284406056";
 
 export type ProductCategory = "Hasil Tani" | "Peternakan";
 
@@ -225,13 +225,33 @@ export const products: Product[] = [
   },
 ];
 
-export function buildWhatsappUrl(productName: string) {
-  const message = `Halo, saya tertarik dengan ${productName} yang ada di website Agratara.`;
+export function buildWhatsappUrl(product: Product) {
+  const message = [
+    "Halo Agratara,",
+    `Saya tertarik dengan produk berikut di katalog Agratara:`,
+    "",
+    `Produk: ${product.name}`,
+    `Harga: ${product.price}${product.unit}`,
+    `Mitra: ${product.partner} (${product.location})`,
+    `Minimum pemesanan: ${product.minOrder}`,
+    "",
+    "Mohon info lebih lanjut mengenai ketersediaan dan cara pemesanannya. Terima kasih.",
+  ].join("\n");
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
 export function buildOrderWhatsappUrl(product: Product) {
-  const message = `Halo, saya ingin memesan ${product.name} (${product.price}${product.unit}) dari ${product.partner}. Mohon info lebih lanjut untuk proses pemesanan.`;
+  const message = [
+    "Halo Agratara,",
+    `Saya ingin memesan produk berikut:`,
+    "",
+    `Produk: ${product.name}`,
+    `Harga: ${product.price}${product.unit}`,
+    `Mitra: ${product.partner} (${product.location})`,
+    `Minimum pemesanan: ${product.minOrder}`,
+    "",
+    "Mohon dibantu proses pemesanannya, termasuk informasi jumlah, pembayaran, dan pengiriman. Terima kasih.",
+  ].join("\n");
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 

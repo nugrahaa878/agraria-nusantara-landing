@@ -1,8 +1,14 @@
 import Image from "next/image";
+import { WHATSAPP_NUMBER } from "../data/products";
 
-const WHATSAPP_NUMBER = "6281268529556";
+const farmerJoinMessage = [
+  "Halo Agratara,",
+  "Saya petani/peternak dan tertarik untuk bergabung sebagai mitra produsen di platform Agratara.",
+  "",
+  "Mohon info lebih lanjut mengenai syarat pendaftaran, cara menjual hasil panen/ternak, dan proses kemitraannya. Terima kasih.",
+].join("\n");
 const farmerWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Halo, saya petani/peternak dan tertarik untuk bergabung sebagai mitra produsen di Agratara."
+  farmerJoinMessage
 )}`;
 
 const farmerFeatures = [

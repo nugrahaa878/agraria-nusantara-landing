@@ -1,7 +1,13 @@
 import { WHATSAPP_NUMBER } from "../data/products";
 
+const joinMessage = [
+  "Halo Agratara,",
+  "Saya tertarik untuk bergabung sebagai petani, peternak, atau pedagang pasar di platform Agratara.",
+  "",
+  "Mohon info lebih lanjut mengenai cara bergabung dan proses selanjutnya. Terima kasih.",
+].join("\n");
 const joinWhatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-  "Halo, saya tertarik untuk bergabung dengan Agratara sebagai petani, peternak, atau pedagang pasar."
+  joinMessage
 )}`;
 
 export default function ContactFooter() {
